@@ -5,6 +5,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
+//Customer Table
 @Entity
 public class Flight<F, I extends Number> {
     @Id
@@ -14,17 +15,17 @@ public class Flight<F, I extends Number> {
     private String aircraft;
     private Integer totalAircraftSeats;
     private Integer flightMileage;
-
+    //empty constructor
     public Flight() {
     }
-
+    //parameterized constructor
     public Flight(String flightNumber, String aircraft, Integer totalAircraftSeats, Integer flightMileage) {
         this.flightNumber = flightNumber;
         this.aircraft = aircraft;
         this.totalAircraftSeats = totalAircraftSeats;
         this.flightMileage = flightMileage;
     }
-
+    //Getters and Setters
     public Integer getFlightId() {
         return flightId;
     }
