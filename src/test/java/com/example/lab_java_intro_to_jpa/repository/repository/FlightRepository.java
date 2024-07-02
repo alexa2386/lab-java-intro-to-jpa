@@ -3,7 +3,7 @@ package com.example.lab_java_intro_to_jpa.repository.repository;
 import com.example.lab_java_intro_to_jpa.model.Flight;
 
 import java.util.List;
-
+/*
 public interface FlightRepository extends Flight <Integer, String, Integer, Integer> {
     List<Flight> findByFlightNumber(String flightNumber);
 
