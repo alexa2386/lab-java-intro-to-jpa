@@ -1,11 +1,17 @@
 package com.example.lab_java_intro_to_jpa.model;
 
-import jakarta.persistence.Entity;
+import jakarta.persistence.*;
 
+//Customer Table
 @Entity
 public class Customer {
+
+    @Id
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
 private Integer customerId;
 private String customerName;
+
+    @Enumerated(EnumType.STRING)
 private String customerStatus;
 private Integer totalCustomerMileage;
 
@@ -19,7 +25,7 @@ private Integer totalCustomerMileage;
         this.customerStatus = customerStatus;
         this.totalCustomerMileage = totalCustomerMileage;
     }
-
+//Getters
     public Integer getCustomerId() {
         return customerId;
     }
@@ -31,7 +37,7 @@ private Integer totalCustomerMileage;
     public String getCustomerName() {
         return customerName;
     }
-
+//Setters
     public void setCustomerName(String customerName) {
         this.customerName = customerName;
     }

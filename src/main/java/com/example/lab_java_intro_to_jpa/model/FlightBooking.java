@@ -1,9 +1,6 @@
 package com.example.lab_java_intro_to_jpa.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 @Entity
 
@@ -11,6 +8,7 @@ class FlightBooking {
 
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
+    @ManyToOne
     private Integer customerId;
     private Integer flightId;
 

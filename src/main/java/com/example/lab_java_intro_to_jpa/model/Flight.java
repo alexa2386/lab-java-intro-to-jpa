@@ -1,9 +1,14 @@
 package com.example.lab_java_intro_to_jpa.model;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 
 @Entity
-public class Flight {
+public class Flight<F, I extends Number> {
+    @Id
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
     private Integer flightId;
     private String flightNumber;
     private String aircraft;
