@@ -1,14 +1,22 @@
 package com.example.lab_java_intro_to_jpa.model;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 
 @Entity
-public class FlightBooking {
 
-    private Integer bookingId;
+class FlightBooking {
+
+    @Id
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
     private Integer customerId;
     private Integer flightId;
 
+    private Integer bookingId;
+
+//EMPTY CONSTRUCTOR
     public FlightBooking() {
     }
 
