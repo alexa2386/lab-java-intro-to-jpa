@@ -3,12 +3,10 @@ package com.example.lab_java_intro_to_jpa.model;
 import jakarta.persistence.*;
 
 @Entity
-
-class FlightBooking {
+public class FlightBooking {
 
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
-    @ManyToOne
     private Integer customerId;
     private Integer flightId;
 

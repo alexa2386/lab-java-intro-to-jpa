@@ -7,7 +7,7 @@ import jakarta.persistence.Id;
 
 //Customer Table
 @Entity
-public class Flight<F, I extends Number> {
+public class Flight {
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     private Integer flightId;

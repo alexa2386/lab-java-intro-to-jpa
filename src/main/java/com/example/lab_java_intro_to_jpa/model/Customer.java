@@ -12,7 +12,7 @@ private Integer customerId;
 private String customerName;
 
     @Enumerated(EnumType.STRING)
-private String customerStatus;
+private CustomerStatus customerStatus;
 private Integer totalCustomerMileage;
 
 //empty constructor
@@ -20,7 +20,7 @@ private Integer totalCustomerMileage;
 
     }
 //parameterized constructor
-    public Customer(String customerName, String customerStatus, Integer totalCustomerMileage) {
+    public Customer(String customerName, CustomerStatus customerStatus, Integer totalCustomerMileage) {
         this.customerName = customerName;
         this.customerStatus = customerStatus;
         this.totalCustomerMileage = totalCustomerMileage;
@@ -42,11 +42,11 @@ private Integer totalCustomerMileage;
         this.customerName = customerName;
     }
 
-    public String getCustomerStatus() {
+    public CustomerStatus getCustomerStatus() {
         return customerStatus;
     }
 
-    public void setCustomerStatus(String customerStatus) {
+    public void setCustomerStatus(CustomerStatus customerStatus) {
         this.customerStatus = customerStatus;
     }
 
